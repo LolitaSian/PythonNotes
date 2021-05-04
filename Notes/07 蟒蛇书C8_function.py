@@ -1,3 +1,15 @@
+def function(xc1,xc2):
+    print(xc1 + xc2)
+function('a','b')           # 位置实参，用传入位置来决定参数
+function('b','a')
+function(xc2='b',xc1='a')   # 关键字实参，传入实参名值对，打乱顺序也无所谓
+def function2(xc1='c',xc2='d'):
+    print(xc1 + xc2)
+function2('a','b')           # 默认实参，不传入参数也可以
+function2('a')           # 默认实参，不传入参数也可以
+function2(xc2='a')           # 默认实参，不传入参数也可以
+function2()           # 默认实参，不传入参数也可以
+
 # 练习8-1：消息
 # 编写一个名为display_message()的函数，它打印一个句子，指出你在本章学的是什么。
 # 调用这个函数，确认显示的消息正确无误。
@@ -103,9 +115,32 @@ show_messages(mes)
 # 将每条消息都打印出来并移到一个名为sent_messages的列表中。
 # 调用函数send_messages()，再将两个列表都打印出来，确认正确地移动了消息。
 print("\n8-10:")
+mes = ['hello','world']
+mes_copy = []
+def send_messages(mes,text):
+    mes.append(text)
+def show_messages2(mes1,mes2):
+    while mes1:
+        current = mes1.pop()
+        print(current)
+        send_messages(mes2,current)
+show_messages2(mes,mes_copy)
+print(mes_copy)
 
 # 练习8-11：消息归档
 # 修改你为完成练习8-10而编写的程序，在调用函数send_messages()时，向它传递消息列表的副本。
 # 调用函数send_messages()后，将两个列表都打印出来，确认保留了原始列表中的消息。
 print("\n8-11:")
+mes = ['hello','world']
+mes_copy = []
+def send_messages2(mes,text):
+    mes.append(text)
+def show_messages3(mes1,mes2):
+    while mes1:
+        current = mes1.pop(0)   # 设定弹出位置，保证mes和mes_copy的顺序一致
+        print(current)
+        send_messages(mes2,current)
+show_messages3(mes[:],mes_copy)
+print(mes)
+print(mes_copy)
 
