@@ -23,7 +23,7 @@ name = 'Sian'
 # - List
 # - Tuple 元组
 # - Dictionary 字典
-#
+# - NoneType 唯一的值None，在函数没有返回值的时候就返回None
 #                                                                                                                                                                     python中不用开发者声明数据类型，系统会自动辨别
 # 可以使用type来查看变量类型
 
@@ -99,3 +99,8 @@ print(str1,str2,str3)
 # 逻辑运算符 and or not
 flag = False
 print(not flag)
+
+# sys.exit() 提前终止程序
+import sys
+sys.exit()
+print('end')    # 前边有exit就不执行这个了
