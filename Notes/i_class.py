@@ -30,17 +30,17 @@ s1 = Student('Sean')
 s1.introduce()
 s1.school.show_message()
 
-import import_092  # 这样导入就把import_demo_09看做一个对象
-p1 = import_092.Dog('刘姐姐','狗','40')
+import i_import2  # 这样导入就把import_demo_09看做一个对象
+p1 = i_import2.Dog('刘姐姐','狗','40')
 p1.set_age()
 p1.introduce()
 
-from import_092 import Dog
+from i_import2 import Dog
 p2 = Dog('刘贱贱','狗','20')
 p2.set_age()
 p2.introduce()
 
-from import_092 import Cat as mimi # 这样导入直接使用import_demo_09中的对象
+from i_import2 import Cat as mimi # 这样导入直接使用import_demo_09中的对象
 p3 = mimi('刘妹妹','猫','8','狸花猫')
 p3.introduce()
 p4 = mimi('刘弟弟','猫','1','奶牛猫')

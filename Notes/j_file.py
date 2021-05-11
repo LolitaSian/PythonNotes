@@ -11,22 +11,22 @@
  并在需要时使用它，Python自会在合适的时候自动将其关闭。
 """
 # 读取整个文件
-with open('10 file/10 test_file.txt') as Poem:
+with open('j_file/1 test_file.txt') as Poem:
     contents = Poem.read()
 print(contents)
 
 # 按行读取
-with open('10 file/10 test_file.txt') as Poem:
+with open('j_file/1 test_file.txt') as Poem:
     for line in Poem:
         print(line.rstrip())    # 加上rstrip消除空行
 # 建一个包含文件各行内容的列表
-with open('10 file/10 test_file.txt') as Poem:
+with open('j_file/1 test_file.txt') as Poem:
     lines = Poem.readlines()    # 返回一个每行文字的列表
 for line in lines:
     print(line.rstrip())
 
 pi = ''
-with open("10 file/10 pi.txt") as Pi:
+with open("j_file/2 pi.txt") as Pi:
     for line in Pi:
         pi += line.strip()      # strip消除空格
 print(f"{pi[0:32]}")    # π后100w位，打印前30位
@@ -41,9 +41,9 @@ else:
 如果要写入的文件不存在，函数open()将自动创建它。然而，以写入模式（'w'）打开文件时千万要小心，
 因为如果指定的文件已经存在，Python将在返回文件对象前清空该文件的内容。
 """
-with open('10 file/10 write_demo.txt','w') as Demo:
+with open('j_file/3 write_demo.txt','w') as Demo:
     Demo.write("I love Python!!!")
-with open('10 file/10 write_demo.txt','a') as Demo:
+with open('j_file/3 write_demo.txt','a') as Demo:
     Demo.write("\nI love Python!")
 
 
@@ -52,10 +52,10 @@ JSON
 '''
 import json
 try:
-    with open('10 file/10 JSON.json') as File:
+    with open('j_file/4 JSON.json') as File:
         contents = json.load(File)
 except FileNotFoundError:
-    with open('10 file/10 JSON.json', 'w') as File:
+    with open('j_file/4 JSON.json', 'w') as File:
         name = input("请输入名字：")
         print(f"hello {name}")
         json.dump(name, File)

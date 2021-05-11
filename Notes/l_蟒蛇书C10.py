@@ -8,15 +8,15 @@
 # 第三次打印时将各行存储在一个列表中，
 # 再在with代码块外打印它们。
 print("\n10-1")
-with open('10 file/10-1 learning_python.txt') as F1:
+with open('j_file/10-1 learning_python.txt') as F1:
     contents = F1.read()
 print(contents)
 
-with open ('10 file/10-1 learning_python.txt') as F1:
+with open ('j_file/10-1 learning_python.txt') as F1:
     for line in F1:
         print(line.rstrip())
 
-with open ('10 file/10-1 learning_python.txt') as F1:
+with open ('j_file/10-1 learning_python.txt') as F1:
     lines = F1.readlines()
 for line in lines:
     print(line.rstrip())
@@ -25,7 +25,7 @@ for line in lines:
 # 可使用方法replace()将字符串中的特定单词都替换为另一个单词。
 # 下面是一个简单的示例，演示了如何将句子中的’dog’替换为’cat'：
 print("\n10-2")
-with open ('10 file/10-1 learning_python.txt') as F2:
+with open ('j_file/10-1 learning_python.txt') as F2:
     lines = F2.readlines()
 for line in lines:
     line = line.replace('Python','C++')
@@ -34,7 +34,7 @@ for line in lines:
 # 练习10-3：访客
 # 编写一个程序，提示用户输入名字。用户做出响应后，将其名字写入文件guest.txt中。
 print("\n10-3")
-with open('10 file/10-3 guest.txt','w') as F3:
+with open('j_file/10-3 guest.txt','w') as F3:
     name = input("请输入访客姓名：")
     F3.write(name)
 
@@ -43,7 +43,7 @@ with open('10 file/10-3 guest.txt','w') as F3:
 # 并将一条到访记录添加到文件guest_book.txt中。确保这个文件中的每条记录都独占一行。
 print("\n10-4")
 print("输入q随时退出。")
-with open('10 file/10-4 guest_book.txt','a') as F4:
+with open('j_file/10-4 guest_book.txt','a') as F4:
     while True:
         name = input("请输入访客姓名：")
         if name == 'q':
@@ -55,7 +55,7 @@ with open('10 file/10-4 guest_book.txt','a') as F4:
 # 每当用户输入一个原因后，都将其添加到一个存储所有原因的文件中。
 print("\n10-5")
 print("输入q随时退出。")
-with open('10 file/10-5 reasons.txt','a') as F5:
+with open('j_file/10-5 reasons.txt','a') as F5:
     while True:
         reason = input("Why do you like programming：")
         if reason == 'q':
@@ -97,7 +97,7 @@ while True:
 # 将这些代码放在一个try-except代码块中，以便在文件不存在时捕获FileNotFound错误，
 # 并显示一条友好的消息。将任意一个文件移到另一个地方，并确认except代码块中的代码将正确执行。
 print("\n10-8")
-files = ['10 file/10-8 cat.txt','/10-8 dog.txt'] # 第二个文件名是错的
+files = ['j_file/10-8 cat.txt','/10-8 dog.txt'] # 第二个文件名是错的
 for i in files:
     try:
         with open(i) as File:
@@ -110,7 +110,7 @@ for i in files:
 # 练习10-9：静默的猫和狗
 # 修改你在练习10-8中编写的except代码块，让程序在任意文件不存在时静默失败。
 print("\n10-9")
-files = ['10 file/10-8 cat.txt','/10-8 dog.txt'] # 第二个文件名是错的
+files = ['j_file/10-8 cat.txt','/10-8 dog.txt'] # 第二个文件名是错的
 for i in files:
     try:
         with open(i) as File:
@@ -125,7 +125,7 @@ for i in files:
 # 下载这些作品的文本文件或将浏览器中的原始文本复制到文本文件中。
 # 就用爱丽丝那一篇吧
 print("\n10-10")
-with open('10 file/10 Alice.txt') as Alice:
+with open('j_file/10 Alice.txt') as Alice:
     contents = Alice.read()
 print(contents.lower().count('the'))
 
@@ -135,10 +135,10 @@ print(contents.lower().count('the'))
 # I know your favorite number! It's _____.
 print("\n10-11")
 import json
-with open('10 file/10-11 favorite_number.json','w') as F11:
+with open('j_file/10-11 favorite_number.json','w') as F11:
     num = input("请输入喜欢的数：")
     json.dump(num,F11)
-with open('10 file/10-11 favorite_number.json') as F11:
+with open('j_file/10-11 favorite_number.json') as F11:
     num = json.load(F11)
     print(f"I know your favorite number! It's {num}.")
 
@@ -148,10 +148,10 @@ with open('10 file/10-11 favorite_number.json') as F11:
 print("\n10-12")
 import json
 try:
-    with open('10 file/10-12 favorite_number.json') as F11:
+    with open('j_file/10-12 favorite_number.json') as F11:
         num = json.load(F11)
 except FileNotFoundError:
-    with open('10 file/10-12 favorite_number.json', 'w') as F11:
+    with open('j_file/10-12 favorite_number.json', 'w') as F11:
         num = input("请输入喜欢的数：")
         json.dump(num, F11)
 else:
@@ -166,7 +166,7 @@ print("\n10-13")
 import json
 def get_stored_name():
     try:
-        with open('10 file/10-13 user.json') as F13:
+        with open('j_file/10-13 user.json') as F13:
             username = json.load(F13)
     except FileNotFoundError:
         return None
@@ -174,7 +174,7 @@ def get_stored_name():
         return username
 def get_new_username():
     username = input("请输入用户名：")
-    with open("10 file/10-13 user.json",'w') as F13:
+    with open("j_file/10-13 user.json",'w') as F13:
         json.dump(username,F13)
     return username
 def greet_user():

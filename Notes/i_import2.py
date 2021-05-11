@@ -1,4 +1,4 @@
-from import_091 import Pet
+from i_import1 import Pet
 class Dog(Pet):
     def __init__(self,name,type,weight):
         super(Dog, self).__init__(name,type,weight)
