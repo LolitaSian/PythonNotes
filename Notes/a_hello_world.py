@@ -20,8 +20,8 @@ name = 'Sian'
 #     - complex 复数
 # - String
 # - Bool
-# - List
-# - Tuple 元组
+# - list
+# - tuple 元组
 # - Dictionary 字典
 # - NoneType 唯一的值None，在函数没有返回值的时候就返回None
 #                                                                                                                                                                     python中不用开发者声明数据类型，系统会自动辨别
@@ -30,11 +30,13 @@ name = 'Sian'
 
 # 标识符，变量名 Python中标识符区分大小写
 import keyword
-# 导包 查看系统关键字
+print("\n查看系统关键字")
 print(keyword.kwlist)
 
 print('1+2=',3)
 
+
+print("\n格式化输出")
 age = 24
 # 格式化输出 占位符%s %f %d0
 print("我是%s，我%d岁" %(name,age))
@@ -49,6 +51,7 @@ print(f"my name is {name}")
 print("my name is {}".format(name))
 
 
+print("\n格式化输出")
 myName = 'sian lAu '
 print(myName)
 print(myName.lower())   # 字符串转换为小写
@@ -58,14 +61,17 @@ print(myName.rstrip())  # 去掉末尾的空格，不会改变原字符串
 # lstrip()开头空格 strip()两边空格
 
 
-# print默认结尾是\n，但是可以修改
-print('hello',end='__')
-print('world')
+# print结束符默认结尾是\n，可以用end修改；间隔符可以用step修改
+print("\n间隔符，结束符")
+print('hello','world',end='❤')
+print('hello','world',sep='❤')
 
 # input('给用户的提示信息') 获取用户输入，遇到回车停止，得到的数据都是字符串类型
+print("\ninput")
 password = input('请输入密码：')
 print("你的密码是%s" %password)
 
+print("\n强制类型转换和eval还原")
 # 强制类型转换
 f = 3.14
 num = int(f)
@@ -83,6 +89,7 @@ print(type(eval('5.1')))
 
 
 # 算术运算符
+print("\n算术运算符")
 print(1+3)
 print(1-3)
 print(1*3)
@@ -92,11 +99,16 @@ print(1//3)     # 取整除
 print(3**2)     # 求幂
 
 # 赋值运算符
+print("\n赋值运算符")
 str1 = 'asd'
 str2,str3 = 'da','dsa'
 print(str1,str2,str3)
+arr = [1,2,3]
+q,w,e = arr
+print(q,w,e)
 
 # 逻辑运算符 and or not
+print("\n逻辑运算符")
 flag = False
 print(not flag)
 
