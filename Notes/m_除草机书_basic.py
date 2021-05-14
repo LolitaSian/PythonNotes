@@ -137,3 +137,25 @@ def addToInventory(inventory, addedItems):
     return inventory
 inv = addToInventory(inv, dragonLoot)
 displayInventory(inv)
+
+# 6.7 表格打印
+# 编写一个名为 printTable()的函数，它接受字符串的列表的列表，
+# 将它显示在组织良好的表格中，每列右对齐。假定所有内层列表都包含同样数目的字符串。
+# 例如，该值可能看起来像这样：
+# tableData = [['apples', 'oranges', 'cherries', 'banana'],
+#             ['Alice', 'Bob', 'Carol', 'David'],
+#             ['dogs', 'cats', 'moose', 'goose']]
+# 你的 printTable()函数将打印出：
+#   apples Alice  dogs
+#  oranges   Bob  cats
+# cherries Carol moose
+#   banana David goose
+tableData = [['apples', 'oranges', 'cherries', 'banana'],
+            ['Alice', 'Bob', 'Carol', 'David'],
+            ['dogs', 'cats', 'moose', 'goose']]
+def printTable(table):
+    for i in range(0,len(table[0])):
+        for j in range(0,len(table)):
+            print(table[j][i].rjust(8),end=' ')
+        print()
+printTable(tableData)
