@@ -38,13 +38,13 @@ print('1+2=',3)
 
 print("\n格式化输出")
 age = 24
-# 格式化输出 占位符%s %f %d0
+# 格式化输出 占位符%s %f %d
 print("我是%s，我%d岁" %(name,age))
 print("%.2f" %3.1415)
 print('%%',"hello %s %%" %name)
 # 使用格式化输出的时候，想输出%需要打两个
 
-# python 3.6之后支持f-string，使用{}占位任何数据类型
+# python 3.6之后支+持f-string，使用{}占位任何数据类型
 # 变量写在{}中间,输出的整个字符之前加上f
 print(f"my name is {name}")
 # Python3.6之前可以还可以用format()

@@ -7,7 +7,7 @@ print("my_list[-2]:",my_list[-2])         # 负数下标
 print("my_list[1:4]:",my_list[1:4])       # 切片
 print('my_list+my_list:',my_list+my_list) # 相加
 print('2*my_list:',2*my_list)             # 相乘
-print('len(my_list):',len(my_list))       # len()获取长度
+print('len(my_list):',len(my_list),'\n')       # len()获取长度
 
 del my_list[1]                         # del用下标删除
 print("del my_list[1] :",my_list)
@@ -72,7 +72,7 @@ dic1 = {'Sian':'07.10','Hick':'07.10','Lily':'11.01','Steven':'11.16'}
 dic1['Sean'] = '05.07'
 
 # 遍历
-print("\n keys(),values(),items()")
+print("\nkeys(),values(),items()")
 for i in dic1.keys():
     print("keys:",i)
 for i in dic1.values():
@@ -92,6 +92,7 @@ print("dic1.get('Sian','06.06'):",dic1.get('Sian','06.06'))
 print("dic1.get('Siann','06.06'):",dic1.get('Siann','06.06'))
 
 # setdefault(a,b) 如果a存在就返回a的值；如果a不存在就返回b，并把b赋值给a
+print("\nsetdefault(a,b)")
 print("dic1.setdefault('Sian','0606'):",dic1.setdefault('Sian','0606'))
 print("dic1.setdefault('Siann','06.06'):",dic1.setdefault('Siann','06.06'))
 print("dic1.setdefault('Siann','07.07'):",dic1.setdefault('Siann','07.07'))

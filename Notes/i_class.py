@@ -30,7 +30,7 @@ s1 = Student('Sean')
 s1.introduce()
 s1.school.show_message()
 
-import i_import2  # 这样导入就把import_demo_09看做一个对象
+import i_import2  # 这样导入就把i_import2看做一个对象
 p1 = i_import2.Dog('刘姐姐','狗','40')
 p1.set_age()
 p1.introduce()

@@ -53,10 +53,10 @@ print('\n')
 # 局部作用域和全局作用域
 variable = 'global'     # 全局变量
 def function1():
-    print(variable)     # 函数中无声明 访问全局变量
+    print("function1 "+variable)     # 函数中无声明 访问全局变量
 def function2():
     variable = 'local'  # 函数中有声明 访问局部变量
-    print(variable)
+    print("function2 "+variable)
 print(variable)
 function1()
 function2()
@@ -66,5 +66,6 @@ def modify1():
 def modify2():
     variable = 'modify2_global'     # 可以访问全局变量，不使用global不能修改
 modify1()
+print(variable)
 modify2()
 print(variable)

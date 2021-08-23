@@ -70,3 +70,4 @@ pyperclip.copy("hel0000")       # 修改剪贴板
 str = pyperclip.paste()         # 返回剪贴板内容
 print(str)
 
+
